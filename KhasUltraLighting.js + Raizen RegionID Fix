@@ -66,7 +66,23 @@ Khas.Lighting.Addons = {};
  *
  *  * Support for this plugin at RPG Maker Web forums
  * forums.rpgmakerweb.com/index.php?threads/khas-advanced-lighting.77679/
- * 
+ * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ 30/12/2019
+ -RegionID Fix-
+ This plugin is a modified version of Khas Ultimate Lighting 4.2 script, which
+ fixes the way it uses regionIDs. Originally, this plugin would use the RegionID
+ to calculate wall height by picking it's value, rounding it down, dividing
+ by 10 and adding 1. So if you defined a certain tile to be region 47, it would
+ round it down to 40, divide by 10 and add one, resulting in a 5-tile tall wall
+ that would defer light and create the shadowing.
+ There are many problems with this method, but the most obvious one is limiting 
+ the developer to use only regions 2-10 without messing up with light deference.
+ This was fixed in this version, so now regions 2-10 provide wall height and from
+ these values onwards, the plugin will interpret anything as 1, meaning none.
+ There are a few bugs that will soon be addressed tho.
+ 
+ As for Khas - Please come back to the RPG Maker scene! We miss you a lot.
+ Also, we can't pay if you if you don't respond. King out.
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
  *  * Terms of Use
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
